@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ConstraintLayout</string>
+    <string name="user_name">Helen Tran</string>
+    <string name="user_address">Apartment Puri Parkview, Pesanggrahan 88 Kembangan, Jakarta Barat 11620, Indonesia</string>
+    <string name="delivery_service">pickup</string>
+    <string name="delivery_time">Now</string>
+    <string name="price_text">Price</string>
+    <string name="price_value">Rp 42.000</string>
+    <string name="status">status</string>
+    <string name="status_value">Pickup</string>
 </resources>

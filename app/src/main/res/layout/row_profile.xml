@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="250dp"
     android:background="@color/main_background">
 
     <ImageView
@@ -12,175 +13,212 @@
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBarrier"
+        app:layout_constraintEnd_toStartOf="@+id/point25Guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/circle_profile_image"
         tools:scaleType="fitXY"
-
-        />
+        tools:srcCompat="@drawable/circle_profile_image" />
 
     <TextView
         android:id="@+id/nameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/addressTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/profileImageView"
-        app:layout_constraintTop_toTopOf="@+id/profileImageView"
+        app:layout_constraintStart_toStartOf="@+id/point25Guideline"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/user_name"
         tools:textColor="black"
-        tools:textSize="18sp"
-        />
+        tools:textSize="18sp" />
 
     <TextView
         android:id="@+id/addressTextView"
         android:layout_width="0dp"
         android:layout_height="91dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:paddingTop="8dp"
         android:text="Address"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBarrier"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/profileImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.100000024"
-        tools:text="@string/user_address"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/point25Guideline"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/user_address" />
 
     <TextView
         android:id="@+id/pickUpTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="pickup"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/timeTextView"
-        app:layout_constraintEnd_toEndOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toStartOf="@+id/point25Guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottomContainer"
-        tools:text="@string/delivery_service"/>
+        app:layout_constraintTop_toTopOf="@+id/bottomBarrier"
+        tools:text="@string/delivery_service" />
 
     <TextView
         android:id="@+id/timeTextView"
-        android:layout_width="44dp"
-        android:layout_height="23dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:text="Now"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomContainer"
-        app:layout_constraintEnd_toStartOf="@+id/priceValueTextView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/point25Guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickUpTextView"
-        app:layout_constraintVertical_bias="0.20999998"
-        tools:text="@string/delivery_time"/>
+        tools:text="@string/delivery_time" />
 
     <TextView
         android:id="@+id/priceTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="price"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pickUpTextView"
-        app:layout_constraintEnd_toStartOf="@+id/statusTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/pickUpTextView"
+        app:layout_constraintBottom_toTopOf="@+id/priceValueTextView"
+        app:layout_constraintEnd_toStartOf="@+id/point50Guideline"
+        app:layout_constraintStart_toStartOf="@+id/point25Guideline"
+        app:layout_constraintTop_toTopOf="@+id/pickUpTextView"
         tools:text="@string/price_text" />
 
     <TextView
         android:id="@+id/priceValueTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="Rp 42.000"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/timeTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.00"
-        app:layout_constraintStart_toStartOf="@+id/priceTextView"
-        tools:text="@string/price_value"/>
+        app:layout_constraintEnd_toStartOf="@+id/point50Guideline"
+        app:layout_constraintStart_toStartOf="@+id/point25Guideline"
+        app:layout_constraintTop_toTopOf="@+id/timeTextView"
+        tools:text="@string/price_value" />
 
     <TextView
         android:id="@+id/statusTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="status"
+
         android:textSize="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pickUpTextView"
-        app:layout_constraintEnd_toStartOf="@+id/productImageView"
-        app:layout_constraintStart_toEndOf="@+id/priceTextView"
-        tools:text="@string/status"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/point75Guideline"
+        app:layout_constraintStart_toStartOf="@+id/point50Guideline"
+        app:layout_constraintTop_toTopOf="@+id/pickUpTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/status" />
 
     <TextView
         android:id="@+id/deliveryTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text="Pickup"
         android:textSize="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/timeTextView"
-        app:layout_constraintStart_toStartOf="@+id/statusTextView"
-        tools:text="@string/status_value"/>
+        app:layout_constraintEnd_toStartOf="@+id/point75Guideline"
+        app:layout_constraintStart_toStartOf="@+id/point50Guideline"
+        app:layout_constraintTop_toTopOf="@+id/timeTextView"
+        tools:text="@string/status_value" />
 
     <ImageView
         android:id="@+id/productImageView"
         android:layout_width="64dp"
         android:layout_height="63dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/timeTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pickUpTextView"
-        tools:srcCompat="@drawable/apple"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/point75Guideline"
+        app:layout_constraintTop_toTopOf="@+id/bottomBarrier"
+        app:layout_constraintVertical_bias="0.0"
         tools:background="@color/main_background"
         tools:ignore="MissingConstraints"
+        tools:srcCompat="@drawable/apple" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/point25Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/point50Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/point75Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/bottomBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="383dp"
+        android:layout_marginRight="383dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="pickUpTextView,timeTextView,priceTextView,priceValueTextView,statusTextView,deliveryTextView,productImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
-    <View
-        android:id="@+id/bottomContainer"
-        android:layout_width="0dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="40dp"
-        android:background="@color/shadow_background"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
 
 </android.support.constraint.ConstraintLayout>
